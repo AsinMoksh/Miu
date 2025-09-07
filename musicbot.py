@@ -106,7 +106,7 @@ async def resume(ctx):
     if ctx.voice_client and ctx.voice_client.is_paused():
         ctx.voice_client.resume()
         await ctx.send("Resumed ▶️")
-bot.command()
+@bot.command()
 async def skip(ctx):
     if ctx.voice_client and ctx.voice_client.is_playing():
         ctx.voice_client.stop()
@@ -133,5 +133,6 @@ async def np(ctx):
 
 # ---------- Run Bot ----------
 bot.run("YOUR_BOT_TOKEN")
+
 
         
