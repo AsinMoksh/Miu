@@ -119,7 +119,7 @@ async def queue(ctx):
     if ctx.guild.id not in guild_queues or len(guild_queues[ctx.guild.id]) == 0:
         await ctx.send("Queue is empty!")
         return
-    msg = "**Upcoming Songs:**\n"
+    msg = "**Upcoming Songs In your vibe:**\n"
     for i, song in enumerate(guild_queues[ctx.guild.id], 1):
         msg += f"{i}. {song}\n"
     await ctx.send(msg)
